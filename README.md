@@ -1,14 +1,14 @@
 # Synobackup Docker Interrupt
 A Python script that stops and starts the Docker containers while Synology backups are running.
 
-**Rationale**: Synology supplies a tool called *Hyper Backup*, which unfortunately does not integrate well with Docker containers.
-Indeed, using *Hyper Backup* to back up Docker running containers may lead to saving locked databases or in-use files.
-Unfortunately, *Hyper Backup* does not provide any triggers to execute tasks before starting and after ending, where Docker containers may typically be stopped and started.
+**Rationale**: Synology supplies a tool called *Hyper Backup*, which unfortunately does not integrate well with containers.
+Indeed, using *Hyper Backup* to back up running containers may lead to saving locked databases or in-use files.
+Unfortunately, *Hyper Backup* does not provide any triggers to execute tasks before starting and after ending, where containers may typically be stopped and started.
 
-This script fills that gap when executed before the backup operation using a scheduled task by performing the following actions:
+This script fills the gap when executed before the backup operation using a scheduled task by performing the following actions:
 
 1. Stop the running containers,
-2. Wait an *initial amount of seconds* , giving the time for *Hyper Backup* to kick in,
+2. Wait an *initial amount of seconds*, giving the time for *Hyper Backup* to kick in,
 3. Check periodically whether the backup operation is still occurring,
 4. After the backup operation, restart the previously running containers.
 
@@ -16,7 +16,7 @@ This script fills that gap when executed before the backup operation using a sch
 The script comes in two flavors for simplicity.
 Head over to the [releases page](https://github.com/JamesMenetrey/synobackup-docker-interrupt/releases) for downloading.
 
-- Packaged as a folder, which includes all the dependencies and the Python interpreter,
+- Packaged as a single folder, which includes all the dependencies and the Python interpreter,
 - Packaged as a single file, which includes all the dependencies and the Python interpreter.
 
 ### Single-folder option
