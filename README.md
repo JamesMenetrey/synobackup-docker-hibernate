@@ -39,11 +39,12 @@ The execution of the program is as follows:
 
 ## Usage
 ```
-synobackup_docker_interrupt, ver.1.0. Written by Jämes Ménétrey.
-Usage: singlefile/synobackup_docker_interrupt <container_timeout> <initial_backup_check> <interval_backup_check>
+synobackup_docker_interrupt, ver.1.1.0. Written by Jämes Ménétrey.
+Usage: singlefolder/synobackup_docker_interrupt/synobackup_docker_interrupt <container_timeout> <initial_backup_check> <interval_backup_check>
         - container_timeout: time [s] to shut down gracefully a container before it's killed.
         - initial_backup_check: time [s] to check whether a backup is occurring for the first time.
         - interval_backup_check: time interval [s] to check whether a backup occurs after the first time.
+The exit code is zero when the script completes successfully, otherwise non-zero.
 
 Note: initial_backup_check is used after the containers are stopped, while interval_backup_check is
       used on a regular basis once the first check has occurred. This allows for planning a shutdown of the
