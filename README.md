@@ -14,7 +14,7 @@ This script fills that gap when executed before the backup operation using a sch
 
 ## Getting the script
 The script comes in two flavors for simplicity.
-Head over to the [releases page](releases) for downloading.
+Head over to the [releases page](https://github.com/JamesMenetrey/synobackup-docker-interrupt/releases) for downloading.
 
 - Packaged as a folder, which includes all the dependencies and the Python interpreter,
 - Packaged as a single file, which includes all the dependencies and the Python interpreter.
