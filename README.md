@@ -53,3 +53,8 @@ Note: initial_backup_check is used after the containers are stopped, while inter
 ## Packaging from sources
 Docker is used to create both single-folder and single-file packages.
 This is achieved by executing the helper script `package.sh`.
+
+## Changelog
+
+- v1.1.0: Returns a non-zero exit code in case a Docker container cannot be stopped or restarted.
+- v1.0.0: Initial release.
