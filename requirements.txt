@@ -1,0 +1,2 @@
+docker==5.0.3
+pyinstaller==4.10
