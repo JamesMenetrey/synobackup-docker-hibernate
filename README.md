@@ -39,9 +39,8 @@ The execution of the program is as follows:
 
 ## Usage
 ```
-synobackup_docker_interrupt, ver.1.1.0. Written by Jämes Ménétrey.
-Usage: singlefolder/synobackup_docker_interrupt/synobackup_docker_interrupt <container_timeout> <initial_backup_check> <interval_backup_check>
-        - container_timeout: time [s] to shut down gracefully a container before it's killed.
+synobackup_docker_interrupt, ver.1.2.0. Written by Jämes Ménétrey.
+Usage: singlefolder/synobackup_docker_interrupt/synobackup_docker_interrupt <initial_backup_check> <interval_backup_check>
         - initial_backup_check: time [s] to check whether a backup is occurring for the first time.
         - interval_backup_check: time interval [s] to check whether a backup occurs after the first time.
 The exit code is zero when the script completes successfully, otherwise non-zero.
@@ -57,5 +56,6 @@ This is achieved by executing the helper script `package.sh`.
 
 ## Changelog
 
+- v1.2.0: Use the Synology OS API to start and stop the containers, preventing from receiving a notification for each stopped container.
 - v1.1.0: Returns a non-zero exit code in case a Docker container cannot be stopped or restarted.
 - v1.0.0: Initial release.
